@@ -1,0 +1,18 @@
+def main():
+    equation = input("What's the equation? ")
+    x, y, z = equation.split(" ")
+    if y == "+":
+        add = int(x) + int(z)
+        print(float(add))
+    elif y == "-":
+        minus = int(x) - int(z)
+        print(float(minus))
+    elif y == "*":
+        multiply = int(x) * int(z)
+        print(float(multiply))
+    elif y == "/":
+        divide = round(int(x) / int(z), 1)
+        print((float(divide)))
+
+
+main()
