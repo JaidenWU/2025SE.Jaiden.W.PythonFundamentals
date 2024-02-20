@@ -1,12 +1,20 @@
 def main():
+    amount = 0
     while True:
         coin = int(input("Insert Coin: "))
-        if coin == 5 or coin == 10 or coin == 25:
-            remainder = 50 - coin
-            print("Amount Due: ", 50 - coin)
+        if coin != 5 and coin != 10 and coin != 25:
+            print("Amount Due: ", 50 - amount)
         else:
-            print("Amount Due: 50 ")
-            main()
+            amount += coin
+            due = 50 - amount
+            if due > 0:
+                print("Amount Due: ", due)
+            elif due < 0:
+                print("Change Owed: ", amount - 50)
+                break
+            elif due == 0:
+                print("Change Owed: ", amount - 50)
+                break
 
 
 # ask user for input for how many coins they inserted
